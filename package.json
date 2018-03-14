@@ -5,6 +5,7 @@
   "license": "MIT",
   "scripts": {
     "start": "tsc",
+    "execute": "node ./dist/index.js",
     "watch": "tsc -w --pretty"
   },
   "devDependencies": {
