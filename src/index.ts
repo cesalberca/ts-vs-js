@@ -61,20 +61,12 @@ console.log(edades)
 const empleados = personas.filter(p => p.trabajo === 'BBVA')
 console.log(empleados)
 
-interface Maja extends Persona {
+interface Maja {
   saluda(nombre: string): string
 }
 
-const personaMaja: Maja = {
-  nombre: 'Susana',
-  edad: 33,
-  saluda(a: string): string {
-    return 'Hola ' + a +  ', soy ' + this.nombre
-  }
-}
-
 type PersonaMaja = Persona & Maja
-const personaMaja2: PersonaMaja = {
+const personaMaja: PersonaMaja = {
   nombre: 'Sara',
   edad: 53,
   saluda(a: string): string {
@@ -82,10 +74,8 @@ const personaMaja2: PersonaMaja = {
   }
 }
 
-const saludo = personaMaja.saluda('César')
-const saludo2 = personaMaja2.saluda('Susana')
+const saludo = personaMaja.saluda('Susana')
 console.log(saludo)
-console.log(saludo2)
 
 // Clases
 class Animal {

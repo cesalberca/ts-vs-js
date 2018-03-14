@@ -40,11 +40,11 @@ const empleados = personas.filter(p => p.trabajo === 'BBVA')
 empleados
 
 const personaMaja = {
-    nombre: 'Susana',
-    edad: 33,
-    saluda(a) {
-        return 'Hola ' + a + ', soy ' + this.nombre
-    }
+  nombre: 'Sara',
+  edad: 53,
+  saluda(a) {
+      return 'Hola ' + a + ', soy ' + this.nombre
+  }
 }
 
 const saludo = personaMaja.saluda('César')
@@ -63,12 +63,12 @@ class Animal {
 
 class Perro extends Animal {
   constructor(nombre) {
-      super(nombre)
+    super(nombre)
   }
 
   mover(distancia = 5) {
-      console.log(this.nombre + ' se mueve...')
-      super.mover(distancia)
+    console.log(this.nombre + ' se mueve...')
+    super.mover(distancia)
   }
 }
 
