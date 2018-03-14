@@ -4,13 +4,11 @@ const bar: number = 1
 const baz: boolean = true
 const qux: string[] = ['bar', 'baz', 'qux']
 
-// Null y undefined
-let u: undefined = undefined
+// Null
 let n: null = null
 
 let a: string = 'bar'
 // no compila: a = null
-
 let b: string | null = 'bar'
 // compila b = null
 
@@ -19,21 +17,15 @@ if (b != null) {
   console.log(l)
 }
 
-// Casts
-let valor: any = 'esto es un string'
-let l: number = (valor as string).length
-console.log(l)
-
 // Funciones
 function suma(a: number, b: number = 1): number {
   return a + b
 }
 
-const res = suma(2).toFixed(4)
-console.log(res)
+const resultado = suma(2).toFixed(4)
+console.log(resultado)
 
 function concatenar(a: string, b: string | null): string {
-  // no compila return a.concat(b)
   if (b != null) {
     return a.concat(b)
   }
@@ -58,19 +50,16 @@ const personas: Persona[] = [{ edad: 42, nombre: 'Paco', trabajo: 'BBVA' }, { ed
 const edades = personas.reduce((a, b) => a + b.edad, 0)
 console.log(edades)
 
-const empleados = personas.filter(p => p.trabajo === 'BBVA')
-console.log(empleados)
-
 interface Maja {
   saluda(nombre: string): string
 }
 
 type PersonaMaja = Persona & Maja
 const personaMaja: PersonaMaja = {
+  edad: 54,
   nombre: 'Sara',
-  edad: 53,
   saluda(a: string): string {
-    return 'Hola ' + a +  ', soy ' + this.nombre
+    return 'hola ' + a + ', soy ' + this.nombre
   }
 }
 
@@ -85,14 +74,14 @@ class Animal {
     this.nombre = nombre
   }
 
-  mover(distancia: number = 0) {
-    console.log('Movido ' + distancia + ' metros.')
+  mover(distancia: number) {
+    console.log('Movido ' + distancia + ' metros')
   }
 }
 
 class Perro extends Animal {
   constructor(nombre: string) {
-    super(nombre);
+    super(nombre)
   }
 
   mover(distancia = 5) {
