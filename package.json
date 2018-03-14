@@ -1,0 +1,13 @@
+{
+  "name": "ts-vs-js",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "tsc",
+    "watch": "tsc -w --pretty"
+  },
+  "devDependencies": {
+    "typescript": "^2.7.2"
+  }
+}
