@@ -16,13 +16,13 @@ b = null
 
 if (b != null) {
   const l = b.length
-  l
+  console.log(l)
 }
 
 // Casts
 let valor = 'esto es un string'
 let l = valor.length
-l
+console.log(l)
 
 // Funciones
 function suma(a, b = 1) {
@@ -30,11 +30,11 @@ function suma(a, b = 1) {
 }
 
 const res = suma(2).toFixed(4)
-res
+console.log(res)
 
 const personas = [{ edad: 42, nombre: 'Paco', trabajo: 'BBVA' }, { edad: 32, nombre: 'Pablo' }]
 const edades = personas.reduce((a, b) => a + b.edad, 0)
-edades
+console.log(edades)
 
 const empleados = personas.filter(p => p.trabajo === 'BBVA')
 empleados
@@ -48,7 +48,7 @@ const personaMaja = {
 }
 
 const saludo = personaMaja.saluda('César')
-saludo
+console.log(saludo)
 
 // Clases
 class Animal {

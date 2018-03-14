@@ -16,13 +16,13 @@ let b: string | null = 'bar'
 
 if (b != null) {
   const l = b.length
-  l
+  console.log(l)
 }
 
 // Casts
 let valor: any = 'esto es un string'
 let l: number = (valor as string).length
-l
+console.log(l)
 
 // Funciones
 function suma(a: number, b: number = 1): number {
@@ -30,7 +30,7 @@ function suma(a: number, b: number = 1): number {
 }
 
 const res = suma(2).toFixed(4)
-res
+console.log(res)
 
 function concatenar(a: string, b: string | null): string {
   // no compila return a.concat(b)
@@ -44,8 +44,8 @@ function concatenar(a: string, b: string | null): string {
 const x = concatenar('Hola', null)
 const y = concatenar('Hola ', 'mundo')
 
-x
-y
+console.log(x)
+console.log(y)
 
 // Interfaces
 interface Persona {
@@ -56,10 +56,10 @@ interface Persona {
 
 const personas: Persona[] = [{ edad: 42, nombre: 'Paco', trabajo: 'BBVA' }, { edad: 32, nombre: 'Pablo' }]
 const edades = personas.reduce((a, b) => a + b.edad, 0)
-edades
+console.log(edades)
 
 const empleados = personas.filter(p => p.trabajo === 'BBVA')
-empleados
+console.log(empleados)
 
 interface Maja extends Persona {
   saluda(nombre: string): string
@@ -84,8 +84,8 @@ const personaMaja2: PersonaMaja = {
 
 const saludo = personaMaja.saluda('César')
 const saludo2 = personaMaja2.saluda('Susana')
-saludo
-saludo2
+console.log(saludo)
+console.log(saludo2)
 
 // Clases
 class Animal {
