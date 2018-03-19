@@ -10,7 +10,7 @@ let n: null = null
 let a: string = 'bar'
 // no compila: a = null
 let b: string | null = 'bar'
-// compila b = null
+// compila: b = null
 
 if (b != null) {
   const l = b.length
