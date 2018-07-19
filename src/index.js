@@ -32,7 +32,7 @@ function suma(a, b = 1) {
 const res = suma(2).toFixed(4)
 console.log(res)
 
-const personas = [{ edad: 42, nombre: 'Paco', trabajo: 'BBVA' }, { edad: 32, nombre: 'Pablo' }]
+const personas = [{ edad: 42, nombre: 'Paco', trabajo: 'Autentia' }, { edad: 32, nombre: 'Pablo' }]
 const edades = personas.reduce((a, b) => a + b.edad, 0)
 console.log(edades)
 

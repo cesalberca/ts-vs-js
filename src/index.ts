@@ -46,7 +46,7 @@ interface Persona {
   trabajo?: string
 }
 
-const personas: Persona[] = [{ edad: 42, nombre: 'Paco', trabajo: 'BBVA' }, { edad: 32, nombre: 'Pablo' }]
+const personas: Persona[] = [{ edad: 42, nombre: 'Paco', trabajo: 'Autentia' }, { edad: 32, nombre: 'Pablo' }]
 const edades = personas.reduce((a, b) => a + b.edad, 0)
 console.log(edades)
 
